@@ -9,9 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "npm run development",
-      "development": "NODE_ENV=development concurrently --kill-others \"npm run client\" \"npm run server\"",
-      "client": "vite",
-      "server": "node server.js"
+    "development": "NODE_ENV=development concurrently --kill-others \"npm run client\" \"npm run server\"",
+    "client": "vite",
+    "server": "node server.js"
   },
   "dependencies": {
     "@google/model-viewer": "^3.5.0",
