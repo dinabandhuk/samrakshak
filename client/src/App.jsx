@@ -9,6 +9,7 @@ import Image from "./pages/image"
 import NotFound from "./pages/notFound"
 import Register from "./pages/register"
 import Login from "./pages/login"
+import Checkout from "./Checkout.jsx"
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+	<Route path="/checkout" element={<Checkout />} />  
       </Routes>
     </>
   )
