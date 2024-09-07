@@ -1,6 +1,6 @@
 # Digital_devalaya
 #asianhack
-Team samrakshak. Project: Digital Devalaya. Ancient sculpture, cultural preservation, digital tourism on AR VR with photogrammetry.
+Team samrakshak. Project: Digital Devalaya. Digital Visits of heritage sites in AR, 3D assets for artists, cultural archival and promotion of ditigal economy.
 # Input
 - images of the object from all viewing angles. At least 25 images recommended. 
 - Processes it with [NodeODM](https://github.com/OpenDroneMap/NodeODM).
@@ -30,10 +30,11 @@ cd into samrakshak/ directory<br>
 ``` cd samrakshak ```<br>
 
 install all dependencies<br>
-``` cd client/ && npm install ``` <br>
+``` cd client/ && npm install --legacy-peer-deps ``` <br>
 ``` cd ../server && npm install ``` <br>
 ``` cd ../stripe && npm install ```<br>
-
+Note: ``` --legacy-peer-deps``` reauired to reconciliate conflicting versions of threejs latest and the older three version required by [google model-viewer](https://www.npmjs.com/package/@google/model-viewer)
+<br>
 Now that the dependencies are installed it's time to run the project.
 ## Running the project
 
@@ -45,7 +46,7 @@ Now that the dependencies are installed it's time to run the project.
 
 run the frontend and backend servers <br>
 open three terminals, first for the frontend and second for backend, third for stripe dummy payment system. <br>
-base directory samrakshak <br>
+base directory samrakshak/ <br>
 ``` cd client/ && npm run dev ``` <br>
 ``` cd server/ && npm run dev ``` <br>
 ``` cd stripe/ && node server.js ``` <br>
