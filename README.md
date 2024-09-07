@@ -21,10 +21,10 @@ all.zip file with
 ``` git clone https://github.com/dinabandhuk/samrakshak.git ```
 
 install mongodb on docker. [Docker community installation docs](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/) \
-``` docker pull mongo  mongodb/mongodb-community-server``` \
+``` docker pull mongo  mongodb/mongodb-community-server```
 
 cd into samrakshak/ directory \
-``` cd samrakshak ``` \
+``` cd samrakshak ```\
 
 install all dependencies \
 ``` cd client/ && npm install ``` \
