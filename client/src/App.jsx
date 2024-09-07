@@ -10,6 +10,7 @@ import NotFound from "./pages/notFound"
 import Register from "./pages/register"
 import Login from "./pages/login"
 import Wrapper from "./pages/wrapper"
+import AR from "./pages/ar"
 
 const App = () => {
 
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/image" element={<Image />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/ar" element={<AR />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Wrapper>

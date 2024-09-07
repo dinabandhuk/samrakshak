@@ -18,8 +18,6 @@ const Image = () => {
 
     const handleOnChange = async (event) => {
         const file = event.target.files[0];
-        // const base64 = await fileToBase64(file);
-        // setImageBase64(base64);
         setImage(file)
     };
 
