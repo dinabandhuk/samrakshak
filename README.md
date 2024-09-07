@@ -1,5 +1,5 @@
-# Digital_devalaya <br \>
-#asianhack
+# Digital_devalaya
+#asianhack <br \>
 Digital Devalaya by team samrakshak. Ancient sculpture, cultural preservation with photogrammetry.
 # Input
 - images of the object from all viewing angles. At least 25 images recommended. 
