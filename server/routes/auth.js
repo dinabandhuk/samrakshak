@@ -7,7 +7,8 @@ const { hashPassword, verifyPassword } = require("../utils/password");
 const router = express.Router();
 
 router.post("/register", async (req, res) => {
-  const { userName, email, password , role } = req.body;
+  const { userName, email, password, role } = req.body;
+
   try {
     if (!userName || !email || !password) {
       return res.status(400).json({ message: "Missing required fields" });
@@ -18,10 +19,18 @@ router.post("/register", async (req, res) => {
       return res.status(400).json({ message: "User already exists" });
 
     const hashedPassword = await hashPassword(password);
-    const newUser = new User({ userName, email, password: hashedPassword , role});
+    const newUser = new User({
+      userName,
+      email,
+      password: hashedPassword,
+      role,
+    });
     await newUser.save();
 
-    const token = createJWT(newUser);
+    const token = createJWT({
+      _id: newUser._id,
+      role: newUser.role,
+    });
 
     return res.status(200).json({ user: newUser, token });
   } catch (error) {
@@ -40,7 +49,7 @@ router.post("/login", async (req, res) => {
 
     const isValid = await verifyPassword(user.password, password);
     if (isValid) {
-      const token = createJWT({ _id: user._id });
+      const token = createJWT({ _id: user._id, role: user.role });
       return res.status(200).json({ user, token });
     }
   } catch (error) {

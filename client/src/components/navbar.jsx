@@ -4,22 +4,29 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { useState, useEffect } from 'react';
 import { jwtDecode } from "jwt-decode"
+import { useNavigate } from 'react-router-dom';
+import logout from '../utils/logout';
 
 
 function MyNavbar() {
 
-    const [user, setUser] = useState(null)
+    const [role, setRole] = useState(null)
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         const token = localStorage.getItem("token")
-
         if (!token) {
-
-            const data = jwtDecode(token)
-            setUser(data)
+            navigate("/login")
         }
-
+        const data = jwtDecode(token)
+        setRole(data.role)
     }, [])
+
+    const handleOnLogout = () => {
+        logout()
+        navigate("/login")
+    }
 
     return (
         <Navbar expand="lg" className="bg-body-light">
@@ -29,7 +36,11 @@ function MyNavbar() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
                         <Nav.Link as={NavLink} to="/">Home</Nav.Link>
-                        <Nav.Link as={NavLink} to="/create">Create 3D</Nav.Link>
+                        {
+                            role === "admin" &&
+                            <Nav.Link as={NavLink} to="/create">Create 3D</Nav.Link>
+                        }
+                        <button onClick={handleOnLogout}>Logout</button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

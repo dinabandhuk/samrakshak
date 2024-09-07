@@ -2,14 +2,13 @@ const mongoose = require("mongoose");
 const { GridFSBucket } = require("mongodb");
 
 const mongoUri = "mongodb://localhost:27017";
-const dbName = "asianHack";
+const dbName = "auth";
 
 // Create a GridFS bucket
 let bucket;
 
 async function connectDB() {
   try {
-
     await mongoose.connect(mongoUri, { dbName });
     console.log("Connected to Database");
 
