@@ -2,6 +2,7 @@ import '../styles/login.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import useAxios from '../utils/useAxios';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
 
@@ -10,13 +11,17 @@ const Register = () => {
   const [password, setPassword] = useState("")
   const [role, setRole] = useState("")
   const axios = useAxios()
+  const navigate = useNavigate()
 
   const handleOnRegister = async (e) => {
     try {
       e.preventDefault();
-      console.log(userName, email, password, role)
       const response = await axios.post("/register", { userName, email, password, role })
-      
+      localStorage.setItem("token", response.data.token)
+      if (response.statusText == "OK") {
+        navigate("/")
+      }
+
     } catch (error) {
       console.log(error)
     }

@@ -21,8 +21,8 @@ const GlbLoader = ({ url }) => {
 
         const controls = new OrbitControls(camera, renderer.domElement);
         controls.enableDamping = true;
-        controls.enableZoom = false;
-        camera.position.set(0, 1, 5);
+        // controls.enableZoom = false;
+        camera.position.set(0, 0, 5);
         controls.update();
 
         // Lighting
@@ -113,7 +113,7 @@ const GlbLoader = ({ url }) => {
     }, [url]);
 
     return (
-        <div ref={canvasRef} style={{ width: '100%', height: '65vh', border: "1px solid black" }}></div>
+        <div ref={canvasRef} style={{ width: '100%', height: '100%', border: "1px solid black" }}></div>
     );
 };
 
