@@ -29,10 +29,8 @@ install mongodb on docker. [Docker community installation docs](https://www.mong
 cd into samrakshak/ directory<br>
 ``` cd samrakshak ```<br>
 
-install all dependencies<br>
-``` cd client/ && npm install --legacy-peer-deps ``` <br>
-``` cd ../server && npm install ``` <br>
-``` cd ../stripe && npm install ```<br>
+install all dependencies. Base directory samrakshak/ <br>
+```cd client/ && npm install --legacy-peer-deps &&  cd ../server && npm install &&  cd ../stripe && npm install```<br>
 Note: ``` --legacy-peer-deps``` reauired to reconciliate conflicting versions of threejs latest and the older three version required by [google model-viewer](https://www.npmjs.com/package/@google/model-viewer)
 <br>
 Now that the dependencies are installed it's time to run the project.
