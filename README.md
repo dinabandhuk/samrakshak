@@ -7,7 +7,7 @@ Team samrakshak. Project: Digital Devalaya. Ancient sculpture, cultural preserva
 
 # Output
 all.zip file with
-- textured glb
+- textured glb 3D model
 - point cloud
 - laz file
 - obj file for 3d printing
@@ -32,32 +32,31 @@ cd into samrakshak/ directory<br>
 install all dependencies<br>
 ``` cd client/ && npm install ``` <br>
 ``` cd ../server && npm install ``` <br>
+``` cd ../stripe && npm install ```<br>
 
 Now that the dependencies are installed it's time to run the project.
 ## Running the project
 
 - start the mongodb server on docker and port map it to 27017<br>
 ``` docker run --name mongo -p 27017:27107 mongodb/mongodb-community-server ```<br>
-- run docker in detached mode append -d <br>
+- to run docker in detached mode append -d <br>
 ``` docker run --name mongo -d -p 27017:27107 mongodb/mongodb-community-server ```<br>
 - you may check the connection using [mongosh](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/#connect-to-the-mongodb-deployment-with-mongosh) \
 
-run the frontend and backend servers 
-##
-open two terminals, one for the frontend and one for backend.
-##
-base directory samrakshak/
-##
-``` cd client/ && npm run dev ```
-##
-``` cd server/ && npm run dev ```
-##
+run the frontend and backend servers <br>
+open three terminals, first for the frontend and second for backend, third for stripe dummy payment system. <br>
+base directory samrakshak <br>
+``` cd client/ && npm run dev ``` <br>
+``` cd server/ && npm run dev ``` <br>
+``` cd stripe/ && node server.js ``` <br>
 
-- The frontend can be accessed at http://localhost:5173/ \
-- All functionalities are available via UI at [this-link](http://localhost:5173/)
+
+- The frontend can be accessed at http://localhost:4242/ <br>
+- All functionalities are available via UI at [this-link](http://localhost:4242/)
 
 # UI
 User can
+- Pay for 3d visits to cultural sites and visit in AR VR headsets.
 - Create 3d models from image input
 - view the 3d model on out website
 - view processing logs
@@ -73,21 +72,23 @@ Theme: Cultural Preservation
 3D modelling and preservation of cultural heritage is time consuming, expensive and looked over. This in turn makes temples, monuments and sculpture hard to preserve \[6\]. There is evidence of struts from collapsed temples being used in other temples after major earthquake damage \[1\]. Our shared history and culture is lost to the elements. Cultural context such as colours, texture,etc cannot be accurately captured by traditional methods and their authenticity after reconstruction is often under question \[2\]\[3\].
 
 ## Solution  
-We propose an open source application with integrated 3D model generator, editor and viewer.These models can be then used to restore, repair or reconstruct while maintaining the complete cultural context of their original existence \[4\].
+We propose an open source application with integrated 3D model generator, editor and viewer.These models can be then used to restore, repair or reconstruct while maintaining the complete cultural context of their original existence \[4\]. This in turn also can be used for online visits via AR VR headsets. It bolsters the digital tourism industry.
 
 ## Methodology  
 With accessible smartphones and drones with high resolution cameras we can hand over the cultural preservation of artefacts to the people. A general smartphone /drone user can upload a series of images or videos of a cultural site or an idol and obtain a ready to use 3D model for  archival, CAD, VR, etc \[5\]. 
 
 ## Merits of Digital Devalaya Project:
 
-- Accessible and low barrier to entry  
-- Cultural enrichment via collective effort  
-- Free and open source  
-- Captures complete cultural context
-
-While we discuss the cultural preservation potential these also serve tourism and digital economic growth.
-
-A typical user does the following:  
+- Massively marketable to wide audiences globally.
+- Sustainable and low cost.
+- Accessible and low barrier to entry.
+- Cultural enrichment via collective effort.  
+- Free and open source.
+- Captures complete cultural context.
+<br>
+It serves Digital tourism, cultural preservation and massive digital service ecosystem.
+<br>
+- Steps to create 3D model :  
 Step1: Obtain camera / drone footage of idols, temples, monuments.  
 Step2: Upload the footage to Digital Devalaya website.  
 Step3: Obtain the 3d model and other necessary assets  
