@@ -8,9 +8,7 @@ const useAxios = () => {
 
   axiosInstance.interceptors.request.use(
     (req) => {
-      // const accessToken = localStorage.getItem("access_token");
-      const accessToken =
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NmQ5Y2Y2YTkwOGE3YTBkZTlkNzczNDUiLCJpYXQiOjE3MjU1NTA0NDIsImV4cCI6MTcyNTgwOTY0Mn0.TGzXdm52qCb3haJN_wYeD3S2Y2AUMNrIOuoANiBeMu4";
+      const accessToken = localStorage.getItem("token");
       if (accessToken) req.headers.Authorization = `Bearer ${accessToken}`;
 
       if (req.data instanceof FormData)

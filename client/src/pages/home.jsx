@@ -70,7 +70,6 @@ const Home = () => {
             {
                 show && antiqueData && <MyModal setShow={setShow} show={show} antiqueData={antiqueData} />
             }
-            <MyNavbar />
             <MyCarousel />
 
             <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
