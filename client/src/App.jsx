@@ -6,6 +6,8 @@ import Test from "./pages/test"
 import CreateModel from "./pages/create3d"
 import MyModal from "./components/modal"
 import Image from "./pages/image"
+import Register from "./pages/register"
+import Login from "./pages/login"
 
 const App = () => {
 
@@ -19,6 +21,8 @@ const App = () => {
         <Route path="/create" element={<CreateModel />} />
         <Route path="/modal" element={<MyModal />} />
         <Route path="/image" element={<Image />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </>
   )
