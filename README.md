@@ -13,39 +13,33 @@ all.zip file with
 - obj file for 3d printing
 - other file formats and assets
 
+---
+
 # Installation and running the projects
 ## Installation
 - These commands are for POSIX / linux terminals.
 - Use WSL on windows machine.
 
-Clone [this](https://github.com/dinabandhuk/samrakshak/tree/main) repo on your local machine. [Help on git clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) 
-##
+Clone [this](https://github.com/dinabandhuk/samrakshak/tree/main) repo on your local machine. [Help on git clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) <br>
 ``` git clone https://github.com/dinabandhuk/samrakshak.git ```
 
-install mongodb on docker. [Docker community installation docs](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/) \
-##
+install mongodb on docker. [Docker community installation docs](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/)<br>
 ``` docker pull mongo  mongodb/mongodb-community-server```
 
-cd into samrakshak/ directory 
-##
-``` cd samrakshak ```
+cd into samrakshak/ directory<br>
+``` cd samrakshak ```<br>
 
-install all dependencies 
-##
-``` cd client/ && npm install ``` 
-##
-``` cd ../server && npm install ``` 
+install all dependencies<br>
+``` cd client/ && npm install ``` <br>
+``` cd ../server && npm install ``` <br>
 
 Now that the dependencies are installed it's time to run the project.
 ## Running the project
 
-- start the mongodb server on docker and port map it to 27017
-##
-``` docker run --name mongo -p 27017:27107 mongodb/mongodb-community-server ```
-##
-- run docker in detached mode append -d \
-``` docker run --name mongo -d -p 27017:27107 mongodb/mongodb-community-server ```
-##
+- start the mongodb server on docker and port map it to 27017<br>
+``` docker run --name mongo -p 27017:27107 mongodb/mongodb-community-server ```<br>
+- run docker in detached mode append -d <br>
+``` docker run --name mongo -d -p 27017:27107 mongodb/mongodb-community-server ```<br>
 - you may check the connection using [mongosh](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/#connect-to-the-mongodb-deployment-with-mongosh) \
 
 run the frontend and backend servers 
