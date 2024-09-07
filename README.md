@@ -1,6 +1,6 @@
 # Digital_devalaya
 #asianhack
-Digital Devalaya by team samrakshak. Ancient sculpture, cultural preservation with photogrammetry.
+Team samrakshak. Project: Digital Devalaya. Ancient sculpture, cultural preservation, digital tourism on AR VR with photogrammetry.
 # Input
 - images of the object from all viewing angles. At least 25 images recommended. 
 - Processes it with [NodeODM](https://github.com/OpenDroneMap/NodeODM).
@@ -12,6 +12,55 @@ all.zip file with
 - laz file
 - obj file for 3d printing
 - other file formats and assets
+
+# Installation and running the projects
+## Installation
+- These commands are for POSIX / linux terminals.
+- Use WSL on windows machine.
+
+Clone [this](https://github.com/dinabandhuk/samrakshak/tree/main) repo on your local machine. [Help on git clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) 
+##
+``` git clone https://github.com/dinabandhuk/samrakshak.git ```
+
+install mongodb on docker. [Docker community installation docs](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/) \
+##
+``` docker pull mongo  mongodb/mongodb-community-server```
+
+cd into samrakshak/ directory 
+##
+``` cd samrakshak ```
+
+install all dependencies 
+##
+``` cd client/ && npm install ``` 
+##
+``` cd ../server && npm install ``` 
+
+Now that the dependencies are installed it's time to run the project.
+## Running the project
+
+- start the mongodb server on docker and port map it to 27017
+##
+``` docker run --name mongo -p 27017:27107 mongodb/mongodb-community-server ```
+##
+- run docker in detached mode append -d \
+``` docker run --name mongo -d -p 27017:27107 mongodb/mongodb-community-server ```
+##
+- you may check the connection using [mongosh](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/#connect-to-the-mongodb-deployment-with-mongosh) \
+
+run the frontend and backend servers 
+##
+open two terminals, one for the frontend and one for backend.
+##
+base directory samrakshak/
+##
+``` cd client/ && npm run dev ```
+##
+``` cd server/ && npm run dev ```
+##
+
+- The frontend can be accessed at http://localhost:5173/ \
+- All functionalities are available via UI at [this-link](http://localhost:5173/)
 
 # UI
 User can
