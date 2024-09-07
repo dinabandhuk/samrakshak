@@ -7,7 +7,7 @@ Team samrakshak. Project: Digital Devalaya. Ancient sculpture, cultural preserva
 
 # Output
 all.zip file with
-- textured glb
+- textured glb 3D model
 - point cloud
 - laz file
 - obj file for 3d printing
@@ -39,7 +39,7 @@ Now that the dependencies are installed it's time to run the project.
 
 - start the mongodb server on docker and port map it to 27017<br>
 ``` docker run --name mongo -p 27017:27107 mongodb/mongodb-community-server ```<br>
-- run docker in detached mode append -d <br>
+- to run docker in detached mode append -d <br>
 ``` docker run --name mongo -d -p 27017:27107 mongodb/mongodb-community-server ```<br>
 - you may check the connection using [mongosh](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/#connect-to-the-mongodb-deployment-with-mongosh) \
 
