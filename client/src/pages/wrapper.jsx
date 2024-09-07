@@ -13,7 +13,7 @@ const Wrapper = ({ children }) => {
                     <MyNavbar />
                 </div>
             )}
-            <div style={{ height: "calc(100vh - 60px)" }}>
+        <div style={{ height: shouldShowNavbar ? "calc(100vh - 60px)" : "100vh" }}>
                 {children}
             </div>
         </div>

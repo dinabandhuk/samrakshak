@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100vh !important;
   /* background-color: aqua; */
   background: linear-gradient(to right bottom,  #82ffac,   #80bfff);
 }
