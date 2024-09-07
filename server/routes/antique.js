@@ -104,8 +104,6 @@ router.get("/getAntique/:id", async (req, res) => {
 router.get("/getAntique", async (req, res) => {
   try {
     const antiques = await Antique.find()
-      .limit(4)
-      .populate("userId", "userName");
     if (antiques) {
       return res.status(200).json(antiques);
     } else {
