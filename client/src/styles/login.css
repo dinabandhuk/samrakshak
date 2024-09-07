@@ -1,0 +1,21 @@
+
+.custom-login-form{
+    /* max-width: 60vw; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin: auto; */
+    height: 100vh;
+    /* background-color: blueviolet; */
+
+}
+
+.custom-box{
+    /* background-color: red; */
+    /* border: 1px solid grey; */
+    padding: 20px;
+    box-shadow: 1px 1px 5px 1px darkkhaki;
+    border-radius: 4px;
+    /* padding: 20px; */
+    /* margin: 20px; */
+}
