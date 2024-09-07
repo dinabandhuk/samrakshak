@@ -1,34 +1,38 @@
-import "@google/model-viewer"
-import { useState, useEffect } from "react"
-import useAxios from "../utils/useAxios"
-import BufferToBlob from "../utils/blob"
+import "@google/model-viewer";
+import { useState } from "react";
+import { div } from "three/webgpu";
 
 const AR = () => {
-    const [glbData, setGlbData] = useState(null)
-    const axios = useAxios()
+    const [files, setFiles] = useState(['buddha.glb', 'garuda.glb', 'ox.glb', 'patan.glb'])
+    const [url, setUrl] = useState(null)
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(`/getGLB/66dc68304c30dc5ea398a6d7`, { responseType: "arraybuffer" })
-                // console.log(response)
-                const url = BufferToBlob(response)
-                setGlbData(url)
-            } catch (error) {
-                console.log(error)
-            }
-        }
-        fetchData()
-    }, [])
+    const handleOnClick = (element) => {
+        setUrl(element)
+    }
+
 
     return (
         <>
             {
-                glbData &&
-                <model-viewer alt="3D model" src={`${glbData}`} camera-controls touch-action="pan-y" shadow-intensity="1"></model-viewer >
-            }
-        </>
-    )
-}
+                files.map((element, index) => {
+                    return (
+                        // <option value="someOption">Some option</option>
+                        <div key={index} onClick={() => handleOnClick(element)}>
+                            {element}
+                        </div>
 
-export default AR
+                    )
+                })
+            }
+            <model-viewer
+                src={url}
+                ar
+                shadow-intensity="1"
+                camera-controls
+                touch-action="pan-y"
+            ></model-viewer>
+        </>
+    );
+};
+
+export default AR;

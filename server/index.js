@@ -1,19 +1,21 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
+const bodyParser = require("body-parser");
 
 const authRouter = require("./routes/auth");
 const antiqueRouter = require("./routes/antique");
-const {connectDB} = require("./database/connect")
+const { connectDB } = require("./database/connect");
 
-connectDB().catch((error)=>{
-  console.log(error)
-  process.exit(1)
-})
+app.use(bodyParser.json());
+
+connectDB().catch((error) => {
+  console.log(error);
+  process.exit(1);
+});
 
 const checkValidation = require("./middleware/requireAuth");
 require("dotenv").config();
-
 
 const port = 8000;
 

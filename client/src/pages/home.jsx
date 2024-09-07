@@ -70,10 +70,12 @@ const Home = () => {
             {
                 show && antiqueData && <MyModal setShow={setShow} show={show} antiqueData={antiqueData} />
             }
+            <MyNavbar />
             <MyCarousel />
 
-            <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
 
+
+            <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
                 {/* project intro */}
                 <div className="container-fluid mt-5 d-flex flex-row " style={{ width: "80vw", boxShadow: "0px 1px 2px grey", padding: "0px" }}>
                     <div className="d-flex flex-column justify-content-center w-50 ms-2" style={{ height: "400px" }}>

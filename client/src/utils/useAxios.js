@@ -9,11 +9,21 @@ const useAxios = () => {
   axiosInstance.interceptors.request.use(
     (req) => {
       const accessToken = localStorage.getItem("token");
-      if (accessToken) req.headers.Authorization = `Bearer ${accessToken}`;
 
-      if (req.data instanceof FormData)
+      // Exclude token for login and register endpoints
+      if (
+        accessToken &&
+        !req.url.includes("/login") &&
+        !req.url.includes("/register")
+      ) {
+        req.headers.Authorization = `Bearer ${accessToken}`;
+      }
+
+      if (req.data instanceof FormData) {
         req.headers["Content-Type"] = "multipart/form-data";
-      else req.headers["Content-Type"] = "application/json";
+      } else {
+        req.headers["Content-Type"] = "application/json";
+      }
 
       req.headers["Access-Control-Allow-Origin"] = "*";
       return req;

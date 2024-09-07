@@ -37,6 +37,8 @@ function MyNavbar() {
                     <Nav className="ms-auto">
                         <Nav.Link as={NavLink} to="/">Home</Nav.Link>
                         <Nav.Link as={NavLink} to="/preview">Preview</Nav.Link>
+                        <Nav.Link as={NavLink} to="/ar">View AR</Nav.Link>
+
                         {
                             role === "admin" &&
                             <Nav.Link as={NavLink} to="/create">Create 3D</Nav.Link>

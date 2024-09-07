@@ -103,7 +103,7 @@ router.get("/getAntique/:id", async (req, res) => {
 
 router.get("/getAntique", async (req, res) => {
   try {
-    const antiques = await Antique.find()
+    const antiques = await Antique.find();
     if (antiques) {
       return res.status(200).json(antiques);
     } else {
@@ -149,6 +149,9 @@ router.get("/getGLB/:glbId", async (req, res) => {
       console.error("Error streaming GLB file:", err);
       res.status(404).send("GLB file not found");
     });
+
+    // res.setHeader("")
+    res.setHeader("Content-Type", "application/octet-stream");
 
     downloadStream.pipe(res);
   } catch (err) {

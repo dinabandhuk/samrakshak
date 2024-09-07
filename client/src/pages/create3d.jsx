@@ -58,7 +58,7 @@ const CreateModel = () => {
     return (
         <>
             {show && <MyModal show={show} setShow={setShow} />}
-            <div className="d-flex justify-content-center align-items-center flex-column text-light text-center h-100" style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" }}>
+            <div className="d-flex justify-content-center align-items-center flex-column text-light text-center" style={{ height: "100vh", width: "100vw", backgroundImage: `url(${backgroundImage})`, backgroundSize: "cover", backgroundPosition: "center" }}>
                 <div className="h-50 w-75 d-flex flex-column justify-content-center align-items-center">
                     <div>
                         <p className="fs-3">Upload file, Create 3D model</p>
