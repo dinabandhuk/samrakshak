@@ -1,1 +1,17 @@
+/* Ensure that headings and paragraphs don't become scrollable */
+h1, h2, h3, h4, h5, h6, p {
+    overflow: visible;  /* Content should expand and not scroll */
+}
+
+/* You can also target all elements globally */
+* {
+    overflow: visible;  /* Ensure that no element is scrollable by default */
+}
+
+/* Ensure no unnecessary scrollbars on the body */
+body {
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
+    overflow-y: auto;    /* Allow vertical scrolling only when necessary */
+    width: auto;
+}
 

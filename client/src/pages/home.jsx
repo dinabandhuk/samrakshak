@@ -70,6 +70,7 @@ const Home = () => {
             {
                 show && antiqueData && <MyModal setShow={setShow} show={show} antiqueData={antiqueData} />
             }
+            <MyNavbar />
             <MyCarousel />
 
             <div className="container-fluid p-0 d-flex flex-column justify-content-center align-items-center">
@@ -96,14 +97,14 @@ const Home = () => {
 
 
                 {/* preservation section  */}
-                <div className="mt-5 d-flex flex-column" style={{ width: "80vw" }}>
+                <div className="mt-5 d-flex flex-column" style={{ width: "80vw", overflow: "visible" }}>
                     <h2 className="text-center mt-3 mb-4">Historical Monuments</h2>
 
-                    <div className="d-flex flex-row flex-wrap justify-content-center">
+                    <div className="d-flex flex-row flex-wrap justify-content-center" style={{overflow: "visible"}}>
                         {
                             antiques.length > 0 && antiques.map((element, key) => {
                                 return (
-                                    <div key={key} style={{ minHeight: "300px" }}>
+                                    <div key={key} style={{ minHeight: "20vh", height: "auto", overflow: "visible" }}>
                                         <MyCard element={element} setShow={setShow} setAntiqueData={setAntiqueData} />
                                     </div>
                                 )
