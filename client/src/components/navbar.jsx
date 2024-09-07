@@ -2,9 +2,23 @@ import { NavLink } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useState , useEffect } from 'react';
+import {jwtDecode} from "jwt-decode"
+
 
 function MyNavbar() {
+
+    const [user , setUser] = useState(null)
+
+    useEffect(()=>{
+        const token = localStorage.getItem("token")
+
+        if(!token) 
+        const data = jwtDecode(token)
+        setUser(data)
+        
+    },[])
+
     return (
         <Navbar expand="lg" className="bg-body-light">
             <Container>
