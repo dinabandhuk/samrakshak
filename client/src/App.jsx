@@ -10,7 +10,6 @@ import NotFound from "./pages/notFound"
 import Register from "./pages/register"
 import Login from "./pages/login"
 import Checkout from "./Checkout.jsx"
-// import Wrapper from "./pages/wrapper"
 import AR from "./pages/ar"
 
 
@@ -18,8 +17,6 @@ const App = () => {
 
   return (
     <>
-
-      {/* <Wrapper> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/object" element={<ObjectGenerator />} />
@@ -32,7 +29,6 @@ const App = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-      {/* </Wrapper> */}
 
     </>
   )

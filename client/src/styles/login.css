@@ -1,21 +1,34 @@
-
-.custom-login-form{
-    /* max-width: 60vw; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* margin: auto; */
-    height: 100vh;
-    /* background-color: blueviolet; */
-
+.custom-login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh !important;
+  /* background-color: aqua; */
+  background: linear-gradient(to right bottom,  #82ffac,   #80bfff);
 }
 
-.custom-box{
-    /* background-color: red; */
-    /* border: 1px solid grey; */
-    padding: 20px;
-    box-shadow: 1px 1px 5px 1px darkkhaki;
-    border-radius: 4px;
-    /* padding: 20px; */
-    /* margin: 20px; */
+.custom-box {
+  width: 400px; /* Increase width */
+  padding: 40px; /* Increase padding */
+  background-color: azure;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  font-size: 1.2rem; /* Increase font size */
+}
+
+.login-form h3 {
+  font-size: 2rem; /* Increase header size */
+}
+
+.form-outline .form-control {
+  font-size: 1.2rem; /* Increase input font size */
+  padding: 10px; /* Increase input padding */
+}
+
+.btn {
+  padding: 12px; /* Increase button padding */
+  font-size: 1.2rem; /* Increase button font size */
 }
