@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "@stripe/react-stripe-js": "^2.8.0",
+    "@stripe/stripe-js": "^4.4.0",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.28.1",
+    "stripe": "^16.10.0"
+  }
+}
