@@ -27,7 +27,9 @@ Clone [this](https://github.com/dinabandhuk/samrakshak/tree/main) repo on your l
 ``` git clone https://github.com/dinabandhuk/samrakshak.git ```
 
 install mongodb on docker. [Docker community installation docs](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/)<br>
-``` docker pull mongo  mongodb/mongodb-community-server```
+``` docker pull mongo```
+<br>
+```mongodb/mongodb-community-server```
 
 cd into samrakshak/ directory<br>
 ``` cd samrakshak ```<br>
