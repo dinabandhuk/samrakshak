@@ -13,6 +13,9 @@ all.zip file with
 - obj file for 3d printing
 - other file formats and assets
 
+# Video Demo
+[![YouTube](http://i.ytimg.com/vi/JgxniHbMkhY/hqdefault.jpg)](https://www.youtube.com/watch?v=JgxniHbMkhY)
+
 ---
 
 # Installation and running the projects
@@ -116,3 +119,4 @@ References.
 \[4\] [https://www.mdpi.com/2072-4292/16/3/473](https://www.mdpi.com/2072-4292/16/3/473)  
 \[5\] [https://www.pix-pro.com/blog/heritage-photogrammetry](https://www.pix-pro.com/blog/heritage-photogrammetry)  
 \[6\] [https://d-nb.info/1143876016/34](https://d-nb.info/1143876016/34)  
+\[7\] [https://blog.flyinglabs.org/2023/05/01/safeguarding-nepals-cultural-treasures-high-resolution-mapping-of-changunarayan-temple/](https://blog.flyinglabs.org/2023/05/01/safeguarding-nepals-cultural-treasures-high-resolution-mapping-of-changunarayan-temple/)
