@@ -81,7 +81,7 @@ const Home = () => {
                 <div className="container-fluid mt-5 d-flex flex-row " style={{ width: "80vw", boxShadow: "0px 1px 2px grey", padding: "0px" }}>
                     <div className="d-flex flex-column justify-content-center w-50 ms-2" style={{ height: "400px" }}>
                         <h2>Welcome to <span className="text-danger">Digital Devalaya</span></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus culpa qui corrupti accusantium beatae sint cum eveniet quas hic sequi, id, mollitia similique amet ipsa error, voluptatem nostrum! Nostrum, omnis.</p>
+                        <p>Filed visit by our team at National Art Musume Bhaktapur Durbar Square. We took videos of artificats with a Samsung A24 smart phone. The video was fed to NodeODM to generate 3D Models.</p>
                     </div>
                     <div className="w-50">
                         <img src={teamImage} alt="ProjectImage" style={{ backgroundPosition: "center", objectFit: "cover", maxHeight: "400px", width: "100%", }} />

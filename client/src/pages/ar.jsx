@@ -2,7 +2,7 @@ import "@google/model-viewer";
 import { useState } from "react";
 
 const AR = () => {
-    const [files, setFiles] = useState(['buddha.glb', 'garuda.glb', 'ox.glb', 'patan.glb'])
+    const [files, setFiles] = useState(['buddha.glb', 'garuda.glb', 'ox.glb', 'patan.glb' , 'durga.glb'])
     const [url, setUrl] = useState(null)
 
     const handleOnClick = (element) => {
