@@ -13,6 +13,9 @@ all.zip file with
 - obj file for 3d printing
 - other file formats and assets
 
+# Video Demo
+[![YouTube](http://i.ytimg.com/vi/JgxniHbMkhY/hqdefault.jpg)](https://www.youtube.com/watch?v=JgxniHbMkhY)
+
 ---
 
 # Installation and running the projects
