@@ -1,6 +1,5 @@
 import "@google/model-viewer";
 import { useState } from "react";
-import { div } from "three/webgpu";
 
 const AR = () => {
     const [files, setFiles] = useState(['buddha.glb', 'garuda.glb', 'ox.glb', 'patan.glb'])

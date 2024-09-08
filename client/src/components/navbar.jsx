@@ -43,7 +43,7 @@ function MyNavbar() {
                             role === "admin" &&
                             <Nav.Link as={NavLink} to="/create">Create 3D</Nav.Link>
                         }
-                        <button onClick={handleOnLogout}>Logout</button>
+                        <button onClick={handleOnLogout} className='btn btn-primary ms-3'>Logout</button>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

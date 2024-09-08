@@ -51,6 +51,7 @@ const GlbLoader = ({ url }) => {
             dracoLoader.setDecoderPath('https://www.gstatic.com/draco/v1/decoders/');
             loader.setDRACOLoader(dracoLoader);
 
+
             loader.load(url, (gltf) => {
                 const model = gltf.scene;
 
@@ -63,7 +64,8 @@ const GlbLoader = ({ url }) => {
                 const pivot = new THREE.Group();
                 pivot.add(model);
                 scene.add(pivot);
-
+                scene.background = new THREE.Color(0xffffff)
+ 
                 pivot.scale.set(2, 2, 2);
 
                 // Animation loop

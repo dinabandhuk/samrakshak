@@ -9,6 +9,7 @@ import Footer from "../components/footer";
 import BufferToBlob from "../utils/blob";
 import GlbLoader from "../components/glbLoader"
 import MyModal from "../components/modal";
+import teamImage from "../images/team.jpeg"
 
 const Home = () => {
     const [antiques, setAntiques] = useState([]);
@@ -33,7 +34,7 @@ const Home = () => {
             const response = await axios.get("/getAntique");
             setAntiques(response.data);
 
-            const glbData = await fetchGlb(response.data[0].glbData)
+            const glbData = await fetchGlb(response.data[4].glbData)
             const url = BufferToBlob(glbData)
             setObjectUrl(url)
 
@@ -83,7 +84,7 @@ const Home = () => {
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus culpa qui corrupti accusantium beatae sint cum eveniet quas hic sequi, id, mollitia similique amet ipsa error, voluptatem nostrum! Nostrum, omnis.</p>
                     </div>
                     <div className="w-50">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80" alt="ProjectImage" style={{ backgroundPosition: "center", objectFit: "cover", maxHeight: "400px", width: "100%", }} />
+                        <img src={teamImage} alt="ProjectImage" style={{ backgroundPosition: "center", objectFit: "cover", maxHeight: "400px", width: "100%", }} />
                     </div>
                 </div>
 
@@ -101,7 +102,7 @@ const Home = () => {
                 <div className="mt-5 d-flex flex-column" style={{ width: "80vw", overflow: "visible" }}>
                     <h2 className="text-center mt-3 mb-4">Historical Monuments</h2>
 
-                    <div className="d-flex flex-row flex-wrap justify-content-center" style={{overflow: "visible"}}>
+                    <div className="d-flex flex-row flex-wrap justify-content-center" style={{ overflow: "visible" }}>
                         {
                             antiques.length > 0 && antiques.map((element, key) => {
                                 return (
@@ -115,10 +116,10 @@ const Home = () => {
                 </div>
 
                 {/* leaflet start here */}
-                <div>
+                {/* <div>
                     <h2 className="text-center mt-5">Location</h2>
                     <div id="map" style={{ height: "400px", width: "80vw" }} className="mb-5 mt-4"></div>
-                </div>
+                </div> */}
 
                 {/* footer here */}
                 <Footer />

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { GridFSBucket } = require("mongodb");
 
-const mongoUri = "mongodb://localhost:27017";
+const mongoUri = "mongodb://192.168.0.2:27017";
 const dbName = "asianHack";
 
 // Create a GridFS bucket

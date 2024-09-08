@@ -103,7 +103,7 @@ router.get("/getAntique/:id", async (req, res) => {
 
 router.get("/getAntique", async (req, res) => {
   try {
-    const antiques = await Antique.find();
+    const antiques = await Antique.find().limit(5);
     if (antiques) {
       return res.status(200).json(antiques);
     } else {
