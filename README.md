@@ -53,6 +53,22 @@ base directory samrakshak/ <br>
 - The frontend can be accessed at http://localhost:4242/ <br>
 - All functionalities are available via UI at [this-link](http://localhost:4242/)
 
+## Endpoints
+
+```localhost:4242/register```  register a user
+<br>
+```localhost:4242/login``` login as user with set privelege
+<br>
+```localhost:4242/ar``` in [ARCore supported devices](https://developers.google.com/ar/devices) mobile devices for AR experience.
+<br>
+```localhost:4242/preview``` upload glb file and render said file
+<br>
+```localhost:4242/create``` upload images to create 3d model and download processed artifacts.
+<br>
+```localhost:4242/``` homepage
+<br>
+The website redirects user to login page if not logged in.
+<br>
 # UI
 User can
 - Pay for 3d visits to cultural sites and visit in AR VR headsets.
