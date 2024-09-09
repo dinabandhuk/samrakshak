@@ -73,7 +73,7 @@ docker run -p 3000:3000 opendronemap/nodeodm
 open three terminals, first for the frontend and second for backend, third for stripe dummy payment system.
 base directory samrakshak/
 ```bash
-cd client/ && npm run dev
+cd client/ && npm run dev -- --host
 ```
 ```bash
 cd server/ && npm run dev
