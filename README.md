@@ -39,24 +39,19 @@ install [nodeODM on docker](https://hub.docker.com/r/opendronemap/nodeodm)
 ```bash
 docker pull opendronemap/nodeodm
 ```
-<br>
-Clone [this](https://github.com/dinabandhuk/samrakshak/tree/main) repo on your local machine. [Help on git clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) <br>
+Clone [this](https://github.com/dinabandhuk/samrakshak/tree/main) repo on your local machine. [Help on git clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)
 ```bash
 git clone https://github.com/dinabandhuk/samrakshak.git
 ```
-
-cd into samrakshak/ directory<br>
+cd into samrakshak/ directory
 ```bash
 cd samrakshak
 ```
-<br>
-
-install all dependencies. Base directory samrakshak/ <br>
+install all dependencies. Base directory samrakshak/
 ```bash
 cd client/ && npm install --legacy-peer-deps &&  cd ../server && npm install &&  cd ../stripe && npm install
 ```
-<br>
-Note: ``` --legacy-peer-deps``` reauired to reconciliate conflicting versions of threejs latest and the older three version required by [google model-viewer](https://www.npmjs.com/package/@google/model-viewer)
+Note: ``` --legacy-peer-deps``` required to reconciliate conflicting versions of threejs latest and the older three version required by [google model-viewer](https://www.npmjs.com/package/@google/model-viewer)
 <br>
 Now that the dependencies are installed it's time to run the project.
 ## Running the project
