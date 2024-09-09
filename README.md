@@ -79,7 +79,8 @@ cd client/ && npm run dev
 cd server/ && npm run dev
 ```
 ```bash
-cd stripe/ && node server.js```
+cd stripe/ && node server.js
+```
 
 - The frontend can be accessed at [http://localhost:4242/](http://localhost:4242/)
 - All functionalities are available via UI at [localhost](http://localhost:4242/)
