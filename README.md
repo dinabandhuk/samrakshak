@@ -2,7 +2,12 @@
 #asianhack
 Team samrakshak. Project: Digital Devalaya. Digital Visits of heritage sites in AR, 3D assets for artists, cultural archival and promotion of ditigal economy.
 # Input
-- images of the object from all viewing angles. At least 25 images recommended. 
+- images of the object from all viewing angles. At least 25 images recommended.
+- scripts to extract frames with video is provided in this repository, make sure ffmpeg is installed in your system and that the directory where your video is has images/ directory. For example : <br>
+.
+├── 20240905_142656.mp4
+└── images
+<br>
 - Processes it with [NodeODM](https://github.com/OpenDroneMap/NodeODM).
 
 # Output
@@ -18,18 +23,22 @@ all.zip file with
 
 ---
 
-# Installation and running the projects
+# Installation and running the project
 ## Installation
 - These commands are for POSIX / linux terminals.
 - Use WSL on windows machine.
 
-Clone [this](https://github.com/dinabandhuk/samrakshak/tree/main) repo on your local machine. [Help on git clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) <br>
-``` git clone https://github.com/dinabandhuk/samrakshak.git ```
 
 install mongodb on docker. [Docker community installation docs](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/)<br>
 ``` docker pull mongo```
 <br>
-```mongodb/mongodb-community-server```
+```docker pull mongodb/mongodb-community-server```
+<br>
+install [nodeODM on docker](https://hub.docker.com/r/opendronemap/nodeodm)
+```docker pull opendronemap/nodeodm```
+<br>
+Clone [this](https://github.com/dinabandhuk/samrakshak/tree/main) repo on your local machine. [Help on git clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) <br>
+``` git clone https://github.com/dinabandhuk/samrakshak.git ```
 
 cd into samrakshak/ directory<br>
 ``` cd samrakshak ```<br>
@@ -46,7 +55,10 @@ Now that the dependencies are installed it's time to run the project.
 - to run docker in detached mode append -d <br>
 ``` docker run --name mongo -d -p 27017:27107 mongodb/mongodb-community-server ```<br>
 - you may check the connection using [mongosh](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/#connect-to-the-mongodb-deployment-with-mongosh) \
-
+<br>
+- start nodeodm on docker
+```docker run -p 3000:3000 opendronemap/nodeodm```
+<br>
 run the frontend and backend servers <br>
 open three terminals, first for the frontend and second for backend, third for stripe dummy payment system. <br>
 base directory samrakshak/ <br>
@@ -57,6 +69,7 @@ base directory samrakshak/ <br>
 
 - The frontend can be accessed at http://localhost:4242/ <br>
 - All functionalities are available via UI at [this-link](http://localhost:4242/)
+- Stripe payment is not fully integrated and is in dev sandbox mode. You can skip running the stripe server.
 
 ## Endpoints
 
@@ -102,7 +115,7 @@ With accessible smartphones and drones with high resolution cameras we can hand 
 - Massively marketable to wide audiences globally.
 - Sustainable and low cost.
 - Accessible and low barrier to entry.
-- Cultural enrichment via collective effort.  
+- Cultural enrichment via collective effort.
 - Free and open source.
 - Captures complete cultural context.
 <br>
@@ -112,7 +125,7 @@ It serves Digital tourism, cultural preservation and massive digital service eco
 Step1: Obtain camera / drone footage of idols, temples, monuments.  
 Step2: Upload the footage to Digital Devalaya website.  
 Step3: Obtain the 3d model and other necessary assets  
-Step4: Use the models and assets for archival, AutoCad, VR, blender,etc
+Step4: Use the models and assets for archival, AR, AutoCad, VR, blender,etc
 
 References.  
 \[1\] [https://nepalitimes.com/here-now/kathmandu-s-temple-restoration-after-1934-quake](https://nepalitimes.com/here-now/kathmandu-s-temple-restoration-after-1934-quake)  
