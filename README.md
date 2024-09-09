@@ -35,15 +35,14 @@ docker pull mongo
 ```bash
 docker pull mongodb/mongodb-community-server
 ```
-<br>
 install [nodeODM on docker](https://hub.docker.com/r/opendronemap/nodeodm)
-```bash 
+```bash
 docker pull opendronemap/nodeodm
 ```
 <br>
 Clone [this](https://github.com/dinabandhuk/samrakshak/tree/main) repo on your local machine. [Help on git clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) <br>
 ```bash
-git clone https://github.com/dinabandhuk/samrakshak.git 
+git clone https://github.com/dinabandhuk/samrakshak.git
 ```
 
 cd into samrakshak/ directory<br>
