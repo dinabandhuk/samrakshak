@@ -4,7 +4,6 @@ Team samrakshak. Project: Digital Devalaya. Digital Visits of heritage sites in 
 # Input
 - images of the object from all viewing angles. At least 25 images recommended.
 - scripts to extract frames with video is provided in this repository, make sure ffmpeg is installed in your system and that the directory where your video is has images/ directory. For example : <br>
-.
 ├── 20240905_142656.mp4<br>
 └── images
 <br>
