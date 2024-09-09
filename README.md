@@ -44,7 +44,9 @@ cd into samrakshak/ directory<br>
 
 install all dependencies. Base directory samrakshak/ <br>
 ```bash
-cd client/ && npm install --legacy-peer-deps &&  cd ../server && npm install &&  cd ../stripe && npm install```<br>
+cd client/ && npm install --legacy-peer-deps &&  cd ../server && npm install &&  cd ../stripe && npm install
+```
+<br>
 Note: ``` --legacy-peer-deps``` reauired to reconciliate conflicting versions of threejs latest and the older three version required by [google model-viewer](https://www.npmjs.com/package/@google/model-viewer)
 <br>
 Now that the dependencies are installed it's time to run the project.
