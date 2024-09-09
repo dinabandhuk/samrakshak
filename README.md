@@ -58,11 +58,11 @@ Now that the dependencies are installed it's time to run the project.
 
 - start the mongodb server on docker and port map it to 27017<br>
 ```bash
-docker run --name mongo -p 27017:27107 mongodb/mongodb-community-server 
+docker run --name mongo -p 27017:27017 mongodb/mongodb-community-server 
 ```
 - to run docker in detached mode append -d
 ```bash
-docker run --name mongo -d -p 27017:27107 mongodb/mongodb-community-server
+docker run --name mongo -d -p 27017:27017 mongodb/mongodb-community-server
 ```
 - you may [check the connection using mongosh](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/#connect-to-the-mongodb-deployment-with-mongosh)
 - start nodeodm on docker
