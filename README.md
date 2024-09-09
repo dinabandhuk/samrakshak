@@ -60,14 +60,11 @@ Now that the dependencies are installed it's time to run the project.
 ```bash
 docker run --name mongo -p 27017:27107 mongodb/mongodb-community-server 
 ```
-<br>
-- to run docker in detached mode append -d <br>
+- to run docker in detached mode append -d
 ```bash
 docker run --name mongo -d -p 27017:27107 mongodb/mongodb-community-server
 ```
-<br>
-- you may [check the connection using mongosh](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/#connect-to-the-mongodb-deployment-with-mongosh) \
-<br>
+- you may [check the connection using mongosh](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/#connect-to-the-mongodb-deployment-with-mongosh)
 - start nodeodm on docker
 ```bash
 docker run -p 3000:3000 opendronemap/nodeodm
@@ -75,22 +72,18 @@ docker run -p 3000:3000 opendronemap/nodeodm
 <br>
 run the frontend and backend servers <br>
 open three terminals, first for the frontend and second for backend, third for stripe dummy payment system. <br>
-base directory samrakshak/ <br>
+base directory samrakshak/
 ```bash
 cd client/ && npm run dev
 ```
-<br>
-```
+```bash
 cd server/ && npm run dev
 ```
-<br>
-```
+```bash
 cd stripe/ && node server.js```
-<br>
 
-
-- The frontend can be accessed at http://localhost:4242/ <br>
-- All functionalities are available via UI at [this-link](http://localhost:4242/)
+- The frontend can be accessed at [http://localhost:4242/](http://localhost:4242/) <br>
+- All functionalities are available via UI at [localhost](http://localhost:4242/)
 - Stripe payment is not fully integrated and is in dev sandbox mode. You can skip running the stripe server.
 
 ## Endpoints
