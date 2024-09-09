@@ -69,9 +69,8 @@ docker run --name mongo -d -p 27017:27107 mongodb/mongodb-community-server
 ```bash
 docker run -p 3000:3000 opendronemap/nodeodm
 ```
-<br>
-run the frontend and backend servers <br>
-open three terminals, first for the frontend and second for backend, third for stripe dummy payment system. <br>
+### run the frontend and backend servers.
+open three terminals, first for the frontend and second for backend, third for stripe dummy payment system.
 base directory samrakshak/
 ```bash
 cd client/ && npm run dev
@@ -82,7 +81,7 @@ cd server/ && npm run dev
 ```bash
 cd stripe/ && node server.js```
 
-- The frontend can be accessed at [http://localhost:4242/](http://localhost:4242/) <br>
+- The frontend can be accessed at [http://localhost:4242/](http://localhost:4242/)
 - All functionalities are available via UI at [localhost](http://localhost:4242/)
 - Stripe payment is not fully integrated and is in dev sandbox mode. You can skip running the stripe server.
 
