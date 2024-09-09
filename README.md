@@ -29,18 +29,28 @@ all.zip file with
 
 
 install mongodb on docker. [Docker community installation docs](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/)<br>
-``` docker pull mongo```
-<br>
-```docker pull mongodb/mongodb-community-server```
+```bash
+docker pull mongo
+```
+```bash
+docker pull mongodb/mongodb-community-server
+```
 <br>
 install [nodeODM on docker](https://hub.docker.com/r/opendronemap/nodeodm)
-```docker pull opendronemap/nodeodm```
+```bash 
+docker pull opendronemap/nodeodm
+```
 <br>
 Clone [this](https://github.com/dinabandhuk/samrakshak/tree/main) repo on your local machine. [Help on git clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) <br>
-``` git clone https://github.com/dinabandhuk/samrakshak.git ```
+```bash
+git clone https://github.com/dinabandhuk/samrakshak.git 
+```
 
 cd into samrakshak/ directory<br>
-``` cd samrakshak ```<br>
+```bash
+cd samrakshak
+```
+<br>
 
 install all dependencies. Base directory samrakshak/ <br>
 ```bash
@@ -53,20 +63,36 @@ Now that the dependencies are installed it's time to run the project.
 ## Running the project
 
 - start the mongodb server on docker and port map it to 27017<br>
-``` docker run --name mongo -p 27017:27107 mongodb/mongodb-community-server ```<br>
+```bash
+docker run --name mongo -p 27017:27107 mongodb/mongodb-community-server 
+```
+<br>
 - to run docker in detached mode append -d <br>
-``` docker run --name mongo -d -p 27017:27107 mongodb/mongodb-community-server ```<br>
-- you may check the connection using [mongosh](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/#connect-to-the-mongodb-deployment-with-mongosh) \
+```bash
+docker run --name mongo -d -p 27017:27107 mongodb/mongodb-community-server
+```
+<br>
+- you may [check the connection using mongosh](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-community-with-docker/#connect-to-the-mongodb-deployment-with-mongosh) \
 <br>
 - start nodeodm on docker
-```docker run -p 3000:3000 opendronemap/nodeodm```
+```bash
+docker run -p 3000:3000 opendronemap/nodeodm
+```
 <br>
 run the frontend and backend servers <br>
 open three terminals, first for the frontend and second for backend, third for stripe dummy payment system. <br>
 base directory samrakshak/ <br>
-``` cd client/ && npm run dev ``` <br>
-``` cd server/ && npm run dev ``` <br>
-``` cd stripe/ && node server.js ``` <br>
+```bash
+cd client/ && npm run dev
+```
+<br>
+```
+cd server/ && npm run dev
+```
+<br>
+```
+cd stripe/ && node server.js```
+<br>
 
 
 - The frontend can be accessed at http://localhost:4242/ <br>
