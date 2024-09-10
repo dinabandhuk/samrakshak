@@ -86,22 +86,28 @@ cd server/ && npm run dev
 
 ```bash
 localhost:4242/register
-```  register a user
+```
+register a user
 ```bash
 localhost:4242/login
-``` login as user with set privelege
 ```
+login as user with set privelege
+```bash
 localhost:4242/ar
-``` in [ARCore supported devices](https://developers.google.com/ar/devices) mobile devices for AR experience.
+```
+in [ARCore supported devices](https://developers.google.com/ar/devices) mobile devices for AR experience.
 ```bash
 localhost:4242/preview
-``` upload glb file and render said file
+```
+upload glb file and render said file
 ```bash
 localhost:4242/create
-``` upload images to create 3d model and download processed artifacts.
+```
+upload images to create 3d model and download processed artifacts.
 ```bash
 localhost:4242/
-``` homepage
+```
+homepage
 The website redirects user to login page if not logged in.
 <br>
 # UI
