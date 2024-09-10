@@ -49,7 +49,7 @@ cd samrakshak
 ```
 install all dependencies. Base directory samrakshak/
 ```bash
-cd client/ && npm install --legacy-peer-deps &&  cd ../server && npm install &&  cd ../stripe && npm install && cd ..
+cd client/ && npm install --legacy-peer-deps &&  cd ../server && npm install && cd ..
 ```
 Note: ``` --legacy-peer-deps``` required to reconciliate conflicting versions of threejs latest and the older three version required by [google model-viewer](https://www.npmjs.com/package/@google/model-viewer)
 <br>
@@ -70,7 +70,7 @@ docker run --name mongo -d -p 27017:27017 mongodb/mongodb-community-server
 docker run -p 3000:3000 opendronemap/nodeodm
 ```
 ### run the frontend and backend servers.
-open three terminals, first for the frontend and second for backend, third for stripe dummy payment system.
+open two terminals, first for the frontend and second for backend.
 base directory samrakshak/
 ```bash
 cd client/ && npm run dev -- --host
@@ -78,28 +78,30 @@ cd client/ && npm run dev -- --host
 ```bash
 cd server/ && npm run dev
 ```
-```bash
-cd stripe/ && node server.js
-```
 
 - The frontend can be accessed at [http://localhost:4242/](http://localhost:4242/)
 - All functionalities are available via UI at [localhost](http://localhost:4242/)
-- Stripe payment is not fully integrated and is in dev sandbox mode. You can skip running the stripe server.
 
 ## Endpoints
 
-```localhost:4242/register```  register a user
-<br>
-```localhost:4242/login``` login as user with set privelege
-<br>
-```localhost:4242/ar``` in [ARCore supported devices](https://developers.google.com/ar/devices) mobile devices for AR experience.
-<br>
-```localhost:4242/preview``` upload glb file and render said file
-<br>
-```localhost:4242/create``` upload images to create 3d model and download processed artifacts.
-<br>
-```localhost:4242/``` homepage
-<br>
+```bash
+localhost:4242/register
+```  register a user
+```bash
+localhost:4242/login
+``` login as user with set privelege
+```
+localhost:4242/ar
+``` in [ARCore supported devices](https://developers.google.com/ar/devices) mobile devices for AR experience.
+```bash
+localhost:4242/preview
+``` upload glb file and render said file
+```bash
+localhost:4242/create
+``` upload images to create 3d model and download processed artifacts.
+```bash
+localhost:4242/
+``` homepage
 The website redirects user to login page if not logged in.
 <br>
 # UI
