@@ -9,7 +9,6 @@ import Image from "./pages/image"
 import NotFound from "./pages/notFound"
 import Register from "./pages/register"
 import Login from "./pages/login"
-import Checkout from "./Checkout.jsx"
 import AR from "./pages/ar"
 
 
