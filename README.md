@@ -150,6 +150,12 @@ Step2: Upload the footage to Digital Devalaya website.
 Step3: Obtain the 3d model and other necessary assets  
 Step4: Use the models and assets for archival, AR, AutoCad, VR, blender,etc
 
+# TODO
+- [ ] Serve the models from a file server. [HFS](https://github.com/rejetto/hfs) is a good choice since it's in the node ecosystem, as is this project.
+- [ ] Replace NodeODM with another high performance backend.
+- [ ] Store the references and file detail in mongodb, and files / assets in file server. The server must have some kind of authorization for verification of user access permissions
+- [ ] Phase out GridFS because it's slow as a sloth and the glb mimetype for files retreived from mongo gridfs is not recognized as 3d file so AR does not work for those files. AR works for files served as static files. This is the motivation to use static server over blob store.
+
 References.  
 \[1\] [https://nepalitimes.com/here-now/kathmandu-s-temple-restoration-after-1934-quake](https://nepalitimes.com/here-now/kathmandu-s-temple-restoration-after-1934-quake)  
 \[2\] [https://www.nps.gov/crps/CRMJournal/Winter2008/article4.html](https://www.nps.gov/crps/CRMJournal/Winter2008/article4.html)  
